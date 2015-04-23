@@ -7,15 +7,15 @@ byte addr[8] = {0x28, 0xFF, 0x26, 0x34, 0x64, 0x14, 0x3, 0x64};
 
 void setup() {
   Serial.begin(9600);
-
-/*  === Get device address ===
+  digitalWrite(4, HIGH);
+//*  === Get device address ===
   byte addr[8];
   while (ds.search(addr)) {
     Serial.print("byte addr[8] = {");
     for(i = 0; i < 8; i++) {
       if (i) Serial.print(", ");
       Serial.print("0x");
-      Serial.print(addr[i], HEX);
+      Serial.print(addr[i], HEX); 
     }
     Serial.println("};");
   }
